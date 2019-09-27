@@ -69,7 +69,7 @@ exports.update = (req, res) => {
   // Validate Request
   if (!req.body.content) {
     return res.status(400).send({
-      message: "Note content can not be empty"
+      message: "Note content can not be empty please add a note"
     });
   }
 
