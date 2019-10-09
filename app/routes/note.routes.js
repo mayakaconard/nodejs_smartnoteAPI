@@ -16,8 +16,15 @@ module.exports = app => {
 
   // Delete a Note with noteId
   app.delete("/notes/:noteId", notes.delete);
+
+  // insert user
   app.post("/users", [users.insert]);
+  // get a single user
   app.get("/users/:userId", [users.getById]);
+
+  // get all users
   app.get("/users/", [users.list]);
+
+  // delete user
   app.delete("/users/:userId", [users.removeById]);
 };
